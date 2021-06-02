@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Roman to decimal conversion";
+}
+
+@model RomanToDecimalConversion.Models.ViewModel
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <h2>Roman to Decimals conversion webapp</h2>
+    <p>Enter desired Roman number: </p>
+    @Html.TextBoxFor(m => m.RomanNumber)
+    <input id="Submit" type="submit" value="Convert!" />
+    <p>Conversion result: </p>
+    @Html.DisplayFor(m => m.DecimalNumber)
+}
+
+
+
